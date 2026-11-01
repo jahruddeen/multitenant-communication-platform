@@ -13,6 +13,12 @@ The **Multitenant Communication Platform** is a backend application designed to 
 
 Built with **FastAPI** and **SQLAlchemy**, the system supports company management, user authentication, contact management, SMS notifications, voice call operations, consent tracking, and communication reporting. It is designed to scale cleanly for multi-tenant business environments while remaining easy to extend for future integrations and cloud deployment.
 
+## Project Preview
+
+![Multitenant Communication Platform Dashboard](https://via.placeholder.com/1400x700/0f172a/ffffff?text=Multitenant+Communication+Platform)
+
+This interface showcases the API-driven communication platform for managing authentication, companies, contacts, SMS, voice workflows, and reporting in a single backend system.
+
 ## Key Features
 
 ### 1. Multi-Tenant Company Management
