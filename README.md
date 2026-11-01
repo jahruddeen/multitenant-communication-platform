@@ -15,7 +15,7 @@ Built with **FastAPI** and **SQLAlchemy**, the system supports company managemen
 
 ## Project Preview
 
-![Multitenant Communication Platform Dashboard](https://via.placeholder.com/1400x700/0f172a/ffffff?text=Multitenant+Communication+Platform)
+![Multitenant Communication Platform Dashboard](https://via.placeholder.com/1400x700/0f172a/ffffff?text=Multitenant+Communication+Platform)![alt text](image.png)
 
 This interface showcases the API-driven communication platform for managing authentication, companies, contacts, SMS, voice workflows, and reporting in a single backend system.
 
