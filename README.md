@@ -227,6 +227,8 @@ http://127.0.0.1:8000/
 
 ## API Documentation
 
+![Automated SMS Voice Platform](images/image.png)
+
 After starting the application, access the API documentation here:
 
 | Documentation | URL |
