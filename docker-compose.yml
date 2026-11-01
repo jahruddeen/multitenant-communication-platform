@@ -1,0 +1,68 @@
+
+services:
+
+  db:
+
+    image: postgres:16-alpine
+
+    container_name: sms-voice-db
+
+    environment:
+
+      POSTGRES_DB: notifications
+
+      POSTGRES_USER: appuser
+
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local-dev-password-change-me}
+
+    volumes:
+
+      - postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+
+      test:
+        - CMD-SHELL
+        - pg_isready -U appuser -d notifications
+
+      interval: 5s
+
+      timeout: 5s
+
+      retries: 10
+
+
+  api:
+
+    build: .
+
+    container_name: sms-voice-api
+
+    ports:
+
+      - "8000:8000"
+
+    environment:
+
+      DATABASE_URL: postgresql+psycopg://appuser:${POSTGRES_PASSWORD:-local-dev-password-change-me}@db:5432/notifications
+
+      SECRET_KEY: ${SECRET_KEY:-local-development-secret-change-me}
+
+      PROVIDER_MODE: mock
+
+      MAX_CALL_ATTEMPTS: 3
+
+      CALL_RETRY_COOLDOWN_MINUTES: 60
+
+    depends_on:
+
+      db:
+
+        condition: service_healthy
+
+    restart: unless-stopped
+
+
+volumes:
+
+  postgres_data:
