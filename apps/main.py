@@ -29,7 +29,7 @@ app = FastAPI(
 
     title=settings.APP_NAME,
 
-    description="Multi Company SMS and Voice Notification Platform",
+    description="Multi Company SMS and Voice Notification Platform -Owner: Mr. Jahruddeen Ansari",
 
     version="1.0.0"
 )
